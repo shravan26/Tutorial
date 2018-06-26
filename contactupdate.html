@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacts Update</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<style type="text/css">
+			
+		</style>
+</head>
+<style type="text/css">
+	*{
+		font-family: sans-serif,'Arial','Helvetica';
+		font-weight: bold;
+	}
+	#Name{
+		position: relative;
+		left: 90px;
+		border-radius: 50px;
+		padding: 8px;
+		margin-bottom: 20px;
+	}
+	#ContactNumber{
+		position: relative;
+		left: 10px;
+		border-radius: 50px;
+		padding: 8px;
+		margin-bottom: 20px;
+	}
+	#Email{
+		position: relative;
+		left: 90px;
+		border-radius: 50px;
+		padding: 8px;
+		margin-bottom: 20px;	
+	}
+	#Submit{
+		width: 100px;
+		height: 50px;
+		box-shadow: 0px 3px 3px 0px black;
+	}
+</style>
+<body>
+<form>
+<p>
+	<label for="Name">Name</label>
+	<input type="text" name="Name" id="Name" placeholder="Shravan">
+</p>
+<p>	
+	<label for="ContactNumber">Contact Number</label>
+	<input type="text" name="ContactNumber" id="ContactNumber" placeholder="9790853602">
+</p>
+<p>
+	<label for="Email">Email</label>
+	<input type="text" name="Email" id="Email" placeholder="shravan2406@gmail.com">
+</p>
+	<button id="Submit" onclick="update()">Submit</button>
+</form>
+<script type="text/javascript">
+	function update(){
+		var x = document.getElementById("Submit");
+		var field = "";
+		var i;
+		for(i = 0 ; i < x.length() ; i++){
+			field += "<td>" + x.elements[i].value + "</td>";
+		}
+	document.getElementById("ContactsTable").
+	}
+</script>
+</body>
+</html>

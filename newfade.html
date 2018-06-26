@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fading</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<p id="fadetext">This Text will fade away</p>
+	<button id="clickme">Click me for Fade</button>
+	<button onClick=windowopen()>Click for Google</button>
+	<div></div>
+	<script type="text/javascript">
+		$("#clickme").click(function(){
+			$("#fadetext").fadeOut(2000, function(){
+				$("#fadetext").fadeIn(2000);
+			});
+		});
+		function windowopen(){
+			window.open("https://www.google.com/");
+		}
+	</script>
+</body>
+</html>

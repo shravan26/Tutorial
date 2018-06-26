@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery-Detecting a Click</title>
+	<style type="text/css">
+		#circle{
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			background-color: green;
+			margin: 50px;
+			float: left;
+		}
+		.square{
+			width: 150px;
+			height: 150px;
+			background-color: red;
+			margin: 50px;
+			float :left;
+		}
+	</style>
+</head>
+<body>
+<div id = "circle"></div>
+<div class = "square"></div>
+<div class= "square"></div>
+<script type="text/javascript" src="jquery-3.3.1.min.js">
+	if(typeof JQuery == "undefined"){
+		alert("Not installed");
+	}
+	else{
+		alert("installed");
+	}
+	$("#circle").Click(function(){
+		alert("Circle is clicked!");
+	});
+	$(".square").Click(function(){
+		alert("Square is clicked!");
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery-changing content</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+#circle{
+	width: 150px;
+	height: 150px;
+	background-color: red;
+	border-radius: 50%;	
+}	
+</style>
+</head>
+<body>
+<div id = "circle"></div>
+<p>this is some text</p>
+<script type="text/javascript">
+	$("#circle").hover(function(){
+		$("p").html("You made this happen");
+	},
+	function(){$("p").html("this is some text");
+});
+</script>
+</body>
+</html>
