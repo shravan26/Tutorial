@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ContactForm</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="contactstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="calling.js"></script>
+</head>
+<body>
+<div class="container">
+<ul class="nav nav-tabs" id="menu">
+   <li class="active"  ><a data-toggle = "tab" href= "#Contacts">Contacts</a></li>
+		<li><a data-toggle = "tab" href= "#Call-logs">Call-Logs</a></li>
+		<li><a data-toggle = "tab" href= "#Messages">Messages</a></li>
+  </ul>
+<div class="tab-content">
+    <div id="Contacts" class="tab-pane active">
+    	<table id="ContactsTable">
+			<tr>
+				<th>Name</th>
+				<th>Contact</th>
+				<th>Email</th>
+			</tr>
+			<tr>
+				<td><img src="no-chickens.jpg" width="30px" height="30px" style="margin-left:10px ; margin-right: 10px" id="avatar">Shravan</td>
+				<td>9790853602</td>
+				<td>shravan2406@gmail.com <button class="icon" onclick= "makecall(this)" ><i class="fa fa-phone"></i></button><button class="icon" onclick="makemessage(this)" ><i class="glyphicon glyphicon-envelope"></i></button></td>
+			</tr>
+		</table>	
+		<div id="Note">
+			<p><strong>Note:</strong> Fields marked as <span id="imp">*</span> are <strong>Mandatory</strong></p>
+		</div>
+		<div id="form">
+			<form id="frm1">
+				<p>
+					<label for="Name" style="font-weight: 900">Name(<span id="imp">*</span>)</label>
+					<input type="text" name="Name" id="Name" placeholder="Shravan" >
+					<strong id="nameempty" style="position: relative;left: 150px;"></strong>
+				</p>
+				<p>	
+					<label for="ContactNumber" style="font-weight: 900;">Contact Number(<span id="imp">*</span>)</label>
+					<input type="text" name="ContactNumber" id="ContactNumber" placeholder="9790853602">
+					<strong id="contactempty" style="position: relative;left: 65px;"></strong>
+				</p>
+				<p>
+					<label for="Email" style="font-weight: 900;">Email(<span id="imp">*</span>)</label>
+					<input type="text" name="Email" id="Email" placeholder="shravan2406@gmail.com">
+					<strong id="emailempty" style="position: relative;left: 150px;"></strong>
+				</p>
+			</form>
+			<input type="file" name="images" id= "file" accept="image/png , image/jpeg" >
+			<button id="Submit" onclick= "update()"><img src="addcontacts.png" alt="addcontacts" id="Addcontacts" style="width: 30px; height: 30px;" ></button>
+		</div>
+    </div>
+<div id="Call-logs" class="tab-pane">
+  	<table id="calllogtable">
+		<tr>
+			<th>Name</th>
+			<th>Number</th>
+			<th>Time</th>
+		</tr>
+	</table>
+</div>
+<div id="Messages" class="tab-pane">
+	<table id="messagetable">
+	<tr>
+		<th>Sent from</th>
+		<th>Sent to</th>
+		<th>Message</th>
+	</tr>
+	</table>  		
+</div>
+</div>
+</div>
+</body>
+</html>
